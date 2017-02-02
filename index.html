@@ -37,36 +37,13 @@ form .btn-primary {
 </head>
 <body>
   <div class="container">
-    <h1>DependencyWheel: An Interactive Visualization Of Package Dependencies</h1>
+    <h1>Service Design - Export Dependency Wheel</h1>
 
-    <p class="lead">Modern development use package managers (composer, npm, bundler, etc.). Applications depend on a large number of packages, which depend themselves on other packages. The Dependency Wheel visualization attempts to reveal the entire dependency tree of any PHP library using Composer for dependency management. Each chord in the disc represents a dependency. Try hovering on packages to mask other dependencies. All rendering is done client-side, in JavaScript. Built with <a href="https://github.com/mbostock/d3">d3.js</a></p>
+    <p class="lead">Intro text</p>
 
     <div id="chart_placeholder"></div>
 
-    <p>Do you want to try it out with another project? Paste the <code>composer.json</code> and <code>composer.lock</code> of any PHP project below to see its Dependency Wheel:</p>
-    <form role="form" id="composerRedraw" class="clearfix">
-      <div class="form-group col-lg-4">
-        <label for="composerJson">composer.json</label>
-        <textarea required type="text" class="form-control" id="composerJson"></textarea>
-      </div>
-      <div class="form-group col-lg-4">
-        <label for="composerLock">composer.lock</label>
-        <textarea required type="text" class="form-control" id="composerLock"></textarea>
-      </div>
-      <div class="form-group col-lg-4">
-        <button type="submit" class="btn btn-lg btn-primary">Refresh</button>
-      </div>
-    </form>
-
-    <h2>Purpose</h2>
-    <ul class="list-unstyled">
-      <li>Did you ever dive into an existing project and wonder how much code is hidden behind a given dependency?</li>
-      <li>Did you ever wonder if a package present in the <code>vendor/</code> directory is actually useful?</li>
-      <li>Did you ever look for a visualization that would help you understand the mess that's in a <code>composer.json</code>?</li>
-    </ul>
-    <p>DependencyWheel tries to answer these needs. Also, it tries to make dependencies look beautiful, but that's another story.</p>
-    
-    <h2>Usage</h2>
+     <h2>Usage</h2>
     <p>To create a DependencyWheel, include the <code>d3.dependencyWheel.js</code> file together with <code>d3.js</code>, just like in this page. Create a new instance of the dependency wheel chart constructor, then make a d3 selection using a CSS selector (of the div where the wheel should be inserted), attach dependency data, and call the chart on the selection.</p>
 <pre>
 var chart = d3.chart.dependencyWheel();
